@@ -177,7 +177,11 @@ class PaymentResult extends StatelessWidget {
                           shape: BoxShape.circle,
                           color: Colors.green,
                         ),
-                        child: const Icon(Icons.check, color: Colors.white, size: 50),
+                        child: const Icon(
+                          Icons.check,
+                          color: Colors.white,
+                          size: 50,
+                        ),
                       ),
                     ),
                   ),

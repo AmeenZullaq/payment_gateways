@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:payments/checkout_payment/presentation/pages/payment_result.dart';
-import 'package:payments/checkout_payment/presentation/widgets/custom_credit_card.dart';
+import 'package:payments/features/payment/presentation/pages/payment_result.dart';
+import 'package:payments/features/payment/presentation/widgets/custom_credit_card.dart';
 
 class PayymentDetails extends StatefulWidget {
   const PayymentDetails({super.key});
@@ -75,13 +75,13 @@ class _PayymentDetailsState extends State<PayymentDetails> {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
                     } else {
-                        Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return const PaymentResult();
-                        },
-                      ),
-                    );
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const PaymentResult();
+                          },
+                        ),
+                      );
                       autovalidateMode = AutovalidateMode.always;
                       setState(() {});
                     }
